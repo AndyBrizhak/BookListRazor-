@@ -14,7 +14,7 @@ namespace BookListRazor
     public class Startup
     {
         /// <summary>
-        /// 
+        /// Start method
         /// </summary>
         /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
