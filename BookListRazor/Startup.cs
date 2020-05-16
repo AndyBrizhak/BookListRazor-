@@ -36,22 +36,31 @@ namespace BookListRazor
         {
             if (env.IsDevelopment())
             {
+                //Middleware for using devloper exceptions
                 app.UseDeveloperExceptionPage();
             }
             else
             {
+                // Middleware for using generic error
                 app.UseExceptionHandler("/Error");
+
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
+            //Middleware for redirection for http request
             app.UseHttpsRedirection();
+
+            //Middleware for using static files
             app.UseStaticFiles();
 
+            //Middleware for using routing
             app.UseRouting();
 
+            //Middleware Autorization
             app.UseAuthorization();
 
+            //Middleware for using end-points system
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapRazorPages();
