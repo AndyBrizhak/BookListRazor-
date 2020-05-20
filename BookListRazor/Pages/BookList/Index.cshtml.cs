@@ -24,9 +24,6 @@ namespace BookListRazor.Pages.BookList
             Books = await _db.Book.ToListAsync();
         }
 
-        public void OnGet()
-        {
-
-        }
+        
     }
 }
