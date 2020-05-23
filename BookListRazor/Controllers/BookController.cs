@@ -34,7 +34,7 @@ namespace BookListRazor.Controllers
             }
             _db.Book.Remove(bookFromDb);
             await _db.SaveChangesAsync();
-            return Json(new { succues = true, message = "Delete successful" });
+            return Json(new { succes = true, message = "Delete successful" });
         }
     }
 }
